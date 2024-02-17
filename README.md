@@ -1,2 +1,4 @@
-# my_project_template
-A template for my new cpp/python projects
+# My Project Template
+
+A template for my new cpp/python projects.
+The structure is inspired by [kiss-icp](https://github.com/PRBonn/kiss-icp).

@@ -1,0 +1,5 @@
+project_name: "tikus"
+
+section_1:
+  config1: 0.1
+  config2: True
