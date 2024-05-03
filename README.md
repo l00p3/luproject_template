@@ -16,12 +16,19 @@ On the main page of this repository:
 
 ### Initialize Project
 Now that you have youre repo on your git server, **Clone** it on your local machine, then:
-- Run the following command:
-  ```sh
-  make project project-name=your_project_name 
-  ```
+- Open the file *Makefile* and change the line:
+
+    ```Makefile
+    project-name = my_project_template
+    ```
+  to:
+
+  ```Makefile
+    project-name = your_project_name
+    ```
   where *your_project_name* is the **Name** that you chosed for your project
 - Open the file *cpp/my_project/CMakeLists.txt* and change the line
+
     ```cmake
     set(PROJECT_NAME my_project)
     ```
@@ -30,6 +37,9 @@ Now that you have youre repo on your git server, **Clone** it on your local mach
     set(PROJECT_NAME your_project_name)
     ```
   where, again, *your_project_name* is the **Name** that you chosed for your project
+
+
+- Do the same operation to the file *python/my_project/CMakeLists.txt* (maybe this is better if done with scikit build variable)
 
 ### Last Steps Before to Start
 

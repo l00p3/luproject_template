@@ -1,13 +1,15 @@
 .PHONY: cpp python
 
+project-name = my_project_template
+
 install:
 	@python3 -m pip install --verbose python/
 
 uninstall:
-	@python3 -m pip uninstall my_project
+	@python3 -m pip uninstall $(project-name)
 
 cpp:
-	@cmake -Bbuild cpp/my_project/
+	@cmake -Bbuild cpp/$(project-name)/
 	@cmake --build build -j$(nproc -all)
 
 python:

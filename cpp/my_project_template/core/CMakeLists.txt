@@ -19,23 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-cmake_minimum_required(VERSION 3.16...3.26)
-set(PROJECT_NAME my_project)
-project(project_name_cpp VERSION 0.1.0 LANGUAGES CXX)
-
-# Setup build options
-option(USE_SYSTEM_EIGEN3 "Use system pre-installed Eigen" OFF)
-
-# Set build type (repeat here for C++ only consumers)
-set(CMAKE_BUILD_TYPE Release)
-
-# cmake options and functions
-include(cmake/StandardProjectOptions.cmake)
-include(cmake/FunctionsDefinitions.cmake)
-
-# Find dependencies
-include(3rdparty/find_dependencies.cmake)
-
-# Add all the libraries (and executables)
-add_subdirectory(core)
-add_subdirectory(apps)
+add_library(${PROJECT_NAME}_core STATIC)
+target_sources(${PROJECT_NAME}_core PRIVATE MyFunctions.cpp)
+target_link_libraries(${PROJECT_NAME}_core PUBLIC Eigen3::Eigen)
+set_global_target_properties(${PROJECT_NAME}_core)
