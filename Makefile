@@ -18,3 +18,6 @@ clean:
 	@rm -rf build/
 	@rm -rf build_python/
 	@rm -rf python/build/
+
+project:
+	@mv cpp/my_project/ cpp/$(project-name)
