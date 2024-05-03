@@ -1,7 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2022 Ignacio Vizzo, Tiziano Guadagnino, Benedikt Mersch, Cyrill
-# Stachniss.
+# Copyright (c) 2024 Luca Lobefaro.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,24 +19,18 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-# Silence timestamp warning
-# Thanks to: https://github.com/PRBonn/kiss-icp
-if(CMAKE_VERSION VERSION_GREATER 3.24)
-  cmake_policy(SET CMP0135 OLD)
-endif()
-
-function(find_external_dependecy PACKAGE_NAME TARGET_NAME INCLUDED_CMAKE_PATH)
-  string(TOUPPER ${PACKAGE_NAME} PACKAGE_NAME_UP)
-  set(USE_FROM_SYSTEM_OPTION "USE_SYSTEM_${PACKAGE_NAME_UP}")
-  if(${${USE_FROM_SYSTEM_OPTION}})
-    find_package(${PACKAGE_NAME} QUIET NO_MODULE)
-  endif()
-  if(NOT ${${USE_FROM_SYSTEM_OPTION}} OR NOT TARGET ${TARGET_NAME})
-    set(${USE_FROM_SYSTEM_OPTION} OFF PARENT_SCOPE) 
-    include(${INCLUDED_CMAKE_PATH})
-  endif()
-
+# Strongly inspired by: https://github.com/PRBonn/kiss-icp
+function(set_global_target_properties target)
+  target_compile_features(${target} PUBLIC cxx_std_17)
+  target_compile_options(
+    ${target}
+    PRIVATE -fdiagnostics-color=always
+            -Werror
+            -Wall
+            -Wextra
+            -pedantic)
+  set(INCLUDE_DIRS ${PROJECT_SOURCE_DIR})
+  get_filename_component(INCLUDE_DIRS ${INCLUDE_DIRS} PATH)
+  target_include_directories(${target} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} PUBLIC 
+    $<BUILD_INTERFACE:${INCLUDE_DIRS}> $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 endfunction()
-
-find_external_dependecy("Eigen3" "Eigen3::Eigen" "${CMAKE_CURRENT_LIST_DIR}/eigen/eigen.cmake")
-
