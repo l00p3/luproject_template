@@ -7,7 +7,7 @@ uninstall:
 	@python3 -m pip uninstall mypybind
 
 cpp:
-	@cmake -Bbuild cpp/mypybind/
+	@cmake -Bbuild cpp/my_project/
 	@cmake --build build -j$(nproc -all)
 
 python:

@@ -20,10 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 add_library(my_project_core STATIC)
-target_sources(my_project_core PRIVATE 
-  MyFunctions.cpp)
+target_sources(my_project_core PRIVATE MyFunctions.cpp)
 target_link_libraries(my_project_core PUBLIC Eigen3::Eigen)
-
-# Set the global target properties to this library
-# See the file ../cmake/CompilerOptions.cmake
 set_global_target_properties(my_project_core)

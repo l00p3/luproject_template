@@ -20,6 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 add_executable(cpp_main main.cpp)
-target_link_libraries(cpp_main PRIVATE mypybind_core)
+target_link_libraries(cpp_main PRIVATE my_project_core)
 target_compile_features(cpp_main PRIVATE cxx_std_17)
 target_compile_options(cpp_main PRIVATE -Wall -Werror)
