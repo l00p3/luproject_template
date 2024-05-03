@@ -1,0 +1,6 @@
+recursive-include my_project *.py
+recursive-include my_project *.cpp
+recursive-include my_project *.h
+global-include CMakeLists.txt
+global-include LICENSE
+global-include *.cmake

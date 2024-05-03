@@ -29,6 +29,6 @@ PYBIND11_MODULE(my_project_pybind, m) {
   // Module docstring
   m.doc() = "MyPybind core library.";
 
-  m.def("dumb_function", &dumbFunction,
+  m.def("_dumb_function", &dumbFunction,
         "A function to show how to use pybind.");
 }
