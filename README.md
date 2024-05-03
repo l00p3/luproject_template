@@ -21,22 +21,23 @@ Now that you have your repo on your git server, **Clone** it on your local machi
     ```Makefile
     project-name = my_project_template
     ```
-  to:
+    to:
 
-  ```Makefile
-    project-name = your_project_name
-  ```
-  where *your_project_name* is the **Name** that you chosed for your project
+    ```Makefile
+      project-name = your_project_name
+    ```
+    where *your_project_name* is the **Name** that you chosed for your project
+
 2. Open the file *cpp/my_project/CMakeLists.txt* and change the line
 
     ```cmake
     set(MYPROJECT_NAME my_project)
     ```
-  to:
-    ```cmake
-    set(MYPROJECT_NAME your_project_name)
-    ```
-  where, again, *your_project_name* is the **Name** that you chosed for your project
+    to:
+      ```cmake
+      set(MYPROJECT_NAME your_project_name)
+      ```
+    where, again, *your_project_name* is the **Name** that you chosed for your project
 
 
 3. Do the same operation to the file *python/my_project/CMakeLists.txt* (maybe this is better if done with scikit build variable)
