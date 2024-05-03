@@ -54,6 +54,7 @@ Now that you have your repo on your git server, **Clone** it on your local machi
     ```
 
     And the line:
+
     ```toml
       wheel.install-dir = "my_project_template/pybind/"
     ```
@@ -87,7 +88,3 @@ Last but not least, go to [kiss-icp](https://github.com/PRBonn/kiss-icp) and say
 ## How to Use This Project Structure
 
 TODO
-
-## TODO
-- add a way to rename the project semi-automatically
-- Fix the version of Eigen
