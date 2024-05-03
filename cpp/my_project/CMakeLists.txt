@@ -20,6 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 cmake_minimum_required(VERSION 3.16...3.26)
+set(PROJECT_NAME my_project)
 project(project_name_cpp VERSION 0.1.0 LANGUAGES CXX)
 
 # Setup build options

@@ -21,3 +21,4 @@ clean:
 
 project:
 	@mv cpp/my_project/ cpp/$(project-name)
+	@mv python/my_project/ python/$(project-name)

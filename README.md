@@ -4,6 +4,7 @@ A template for my new cpp/python projects.
 The structure is inspired by [kiss-icp](https://github.com/PRBonn/kiss-icp).
 
 ## How to Use Me
+I am assuming that you have basic knwowledge of git, CMake, Python and C++, otherwise please don't use this template.
 
 ### Create a New Repo from This Templae
 First, you need to create your repo using me as a template.
@@ -19,8 +20,16 @@ Now that you have youre repo on your git server, **Clone** it on your local mach
   ```sh
   make project project-name=your_project_name 
   ```
-  where your_project_name is the **Name** that you chosed for your project
-- Blah
+  where *your_project_name* is the **Name** that you chosed for your project
+- Open the file *cpp/my_project/CMakeLists.txt* and change the line
+    ```cmake
+    set(PROJECT_NAME my_project)
+    ```
+  to:
+    ```cmake
+    set(PROJECT_NAME your_project_name)
+    ```
+  where, again, *your_project_name* is the **Name** that you chosed for your project
 
 ### Last Steps Before to Start
 
