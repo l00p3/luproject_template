@@ -15,7 +15,7 @@ On the main page of this repository:
 4. Click **Create repository from template**
 
 ### Initialize Project
-Now that you have youre repo on your git server, **Clone** it on your local machine, then:
+Now that you have your repo on your git server, **Clone** it on your local machine, then:
 1. Open the file *Makefile* and change the line:
 
     ```Makefile
@@ -25,7 +25,7 @@ Now that you have youre repo on your git server, **Clone** it on your local mach
 
   ```Makefile
     project-name = your_project_name
-    ```
+  ```
   where *your_project_name* is the **Name** that you chosed for your project
 2. Open the file *cpp/my_project/CMakeLists.txt* and change the line
 
