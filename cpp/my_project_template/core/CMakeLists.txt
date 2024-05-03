@@ -19,7 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-add_library(${PROJECT_NAME}_core STATIC)
-target_sources(${PROJECT_NAME}_core PRIVATE MyFunctions.cpp)
-target_link_libraries(${PROJECT_NAME}_core PUBLIC Eigen3::Eigen)
-set_global_target_properties(${PROJECT_NAME}_core)
+add_library(${MYPROJECT_NAME}_core STATIC)
+target_sources(${MYPROJECT_NAME}_core PRIVATE MyFunctions.cpp)
+target_link_libraries(${MYPROJECT_NAME}_core PUBLIC Eigen3::Eigen)
+set_global_target_properties(${MYPROJECT_NAME}_core)

@@ -20,13 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 cmake_minimum_required(VERSION 3.16...3.26)
-set(PROJECT_NAME my_project_template)
-project(${PROJECT_NAME}_cpp VERSION 0.1.0 LANGUAGES CXX)
+set(MYPROJECT_NAME my_project_template)
+project(${MYPROJECT_NAME}_cpp VERSION 0.1.0 LANGUAGES CXX)
 
 # Setup build options
 option(USE_SYSTEM_EIGEN3 "Use system pre-installed Eigen" OFF)
 
-# Set build type (repeat here for C++ only consumers)
+# Set build type
 set(CMAKE_BUILD_TYPE Release)
 
 # cmake options and functions

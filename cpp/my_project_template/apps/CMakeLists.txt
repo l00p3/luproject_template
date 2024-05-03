@@ -19,7 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-add_executable(${PROJECT_NAME}_maincpp main.cpp)
-target_link_libraries(${PROJECT_NAME}_maincpp PRIVATE ${PROJECT_NAME}_core)
-target_compile_features(${PROJECT_NAME}_maincpp PRIVATE cxx_std_17)
-target_compile_options(${PROJECT_NAME}_maincpp PRIVATE -Wall -Werror)
+add_executable(${MYPROJECT_NAME}_maincpp main.cpp)
+target_link_libraries(${MYPROJECT_NAME}_maincpp PRIVATE ${MYPROJECT_NAME}_core)
+target_compile_features(${MYPROJECT_NAME}_maincpp PRIVATE cxx_std_17)
+target_compile_options(${MYPROJECT_NAME}_maincpp PRIVATE -Wall -Werror)

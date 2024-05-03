@@ -21,6 +21,10 @@
 // SOFTWARE.
 #include "MyFunctions.hpp"
 
+#include <Eigen/Core>
 #include <iostream>
 
-void dumbFunction() { std::cout << "I EXIST." << std::endl; }
+void dumbFunction() {
+  Eigen::Vector3d v = Eigen::Vector3d::Zero();
+  std::cout << v << std::endl;
+}
