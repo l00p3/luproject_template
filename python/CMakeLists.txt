@@ -20,7 +20,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 cmake_minimum_required(VERSION 3.16...3.26)
-project(myproject_pybind VERSION 0.1.0 LANGUAGES CXX)
+if(DEFINED SKBUILD_PROJECT_NAME)
+  set(MYPROJECT_NAME ${SKBUILD_PROJECT_NAME})
+else()
+  set(MYPROJECT_NAME my_project_template)
+endif()
+project(${MYPROJECT_NAME}_pybind VERSION 0.1.0 LANGUAGES CXX)
 
 # Set build type
 set(CMAKE_BUILD_TYPE Release)
@@ -32,7 +37,7 @@ set(PYBIND11_NEWPYTHON ON)
 find_package(pybind11 CONFIG REQUIRED)
 
 # Import the cpp part
-add_subdirectory(${PROJECT_SOURCE_DIR}/../cpp/my_project ${CMAKE_CURRENT_BINARY_DIR}/my_project)
+add_subdirectory(${PROJECT_SOURCE_DIR}/../cpp/${MYPROJECT_NAME} ${CMAKE_CURRENT_BINARY_DIR}/${MYPROJECT_NAME})
 
 # Import the pybind code
-add_subdirectory(my_project/pybind)
+add_subdirectory(${MYPROJECT_NAME}/pybind)

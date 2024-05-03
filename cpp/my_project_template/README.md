@@ -1,5 +1,3 @@
-# MY_PROJECT_CPP
-
 ## How to build
 
 ```sh

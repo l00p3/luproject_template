@@ -19,8 +19,8 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from my_project.pybind import my_project_pybind
+from my_project_template.pybind import my_project_template_pybind
 
 
 def dumb_function():
-    my_project_pybind._dumb_function()
+    my_project_template_pybind._dumb_function()

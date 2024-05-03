@@ -21,11 +21,11 @@
 // SOFTWARE.
 #include <pybind11/pybind11.h>
 
-#include "my_project/core/MyFunctions.hpp"
+#include "my_project_template/core/MyFunctions.hpp"
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(my_project_pybind, m) {
+PYBIND11_MODULE(my_project_template_pybind, m) {
   // Module docstring
   m.doc() = "MyPybind core library.";
 

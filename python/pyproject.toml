@@ -3,7 +3,7 @@ requires = ["scikit-build-core", "pybind11"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "my_project"
+name = "my_project_template"
 version = "0.1.0"
 description = "Add a description of your python package."
 readme = "README.md"
@@ -20,4 +20,4 @@ editable.mode = "redirect"
 editable.rebuild = true
 editable.verbose = true
 sdist.exclude = ["pybind/"]
-wheel.install-dir = "my_project/pybind/"
+wheel.install-dir = "my_project_template/pybind/"
