@@ -41,6 +41,12 @@ Now that you have youre repo on your git server, **Clone** it on your local mach
 
 - Do the same operation to the file *python/my_project/CMakeLists.txt* (maybe this is better if done with scikit build variable)
 
+- Run the command
+
+  ```sh
+  make project
+  ```
+
 ### Last Steps Before to Start
 
 ## TODO
