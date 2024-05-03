@@ -4,7 +4,7 @@ install:
 	@python3 -m pip install --verbose python/
 
 uninstall:
-	@python3 -m pip uninstall mypybind
+	@python3 -m pip uninstall my_project
 
 cpp:
 	@cmake -Bbuild cpp/my_project/

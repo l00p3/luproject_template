@@ -21,7 +21,7 @@
 // SOFTWARE.
 #include <pybind11/pybind11.h>
 
-#include "core/MyFunctions.hpp"
+#include "my_project/core/MyFunctions.hpp"
 
 namespace py = pybind11;
 
