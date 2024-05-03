@@ -1,20 +1,20 @@
-.PHONY: cpp
+.PHONY: cpp python
 
 install:
-	@echo TODO
+	@python3 -m pip install --verbose python/
 
 uninstall:
-	@echo TODO
-
-editable:
-	@echo TODO
-
-test:
-	@echo TODO
+	@python3 -m pip uninstall mypybind
 
 cpp:
-	@cmake -Bbuild cpp/my_project
-	@cmake --build build -j$(nproc --all)
+	@cmake -Bbuild cpp/mypybind/
+	@cmake --build build -j$(nproc -all)
+
+python:
+	@cmake -Bbuild_python python/
+	@cmake --build build_python -j$(nproc -all)
 
 clean:
 	@rm -rf build/
+	@rm -rf build_python/
+	@rm -rf python/build/

@@ -1,0 +1,3 @@
+pybind11_add_module(my_project_pybind MODULE my_project_pybind.cpp)
+target_link_libraries(my_project_pybind PRIVATE my_project_core)
+install(TARGETS my_project_pybind DESTINATION .)

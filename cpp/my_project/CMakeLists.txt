@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.22)
 project(project_name_cpp VERSION 0.1.0 LANGUAGES CXX)
 
 # Setup build options

@@ -4,7 +4,7 @@ add_library(my_project::core ALIAS core)
 
 # Add all the sources to the library
 target_sources(core PRIVATE 
-  Provone.cpp)
+  MyFunctions.cpp)
 
 # Link the dependencies
 target_link_libraries(core PUBLIC Eigen3::Eigen)

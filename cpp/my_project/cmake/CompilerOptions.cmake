@@ -1,7 +1,8 @@
-# TODO: please understand this madness
 function(set_global_target_properties target)
+  # Set the cpp version to use
   target_compile_features(${target} PUBLIC cxx_std_17)
   target_compile_definitions(${target} PUBLIC $<$<COMPILE_LANG_AND_ID:CXX,MSVC>:_USE_MATH_DEFINES>)
+  # Compile options
   target_compile_options(
     ${target}
     PRIVATE # MSVC
@@ -25,6 +26,7 @@ function(set_global_target_properties target)
             $<$<COMPILE_LANG_AND_ID:CXX,GNU>:-Wconversion>
             $<$<COMPILE_LANG_AND_ID:CXX,GNU>:-Wdisabled-optimization>
             $<$<COMPILE_LANG_AND_ID:CXX,GNU>:-Woverloaded-virtual>)
+  # Set the include dirs of the target
   set(INCLUDE_DIRS ${PROJECT_SOURCE_DIR})
   get_filename_component(INCLUDE_DIRS ${INCLUDE_DIRS} PATH)
   target_include_directories(${target} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
