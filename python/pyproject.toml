@@ -19,5 +19,5 @@ cmake.minimum-version = "3.16"
 editable.mode = "redirect"
 editable.rebuild = true
 editable.verbose = true
-sdist.exclude = ["pybind/"] # Exclude the pybind code from the wheel
+sdist.exclude = ["pybind/"]
 wheel.install-dir = "my_project/pybind/"

@@ -4,4 +4,6 @@ A template for my new cpp/python projects.
 The structure is inspired by [kiss-icp](https://github.com/PRBonn/kiss-icp).
 
 ## TODO
-Fix the version of Eigen
+- Fix the problem with scikit_build_core
+- add a way to rename the project semi-automatically
+- Fix the version of Eigen
