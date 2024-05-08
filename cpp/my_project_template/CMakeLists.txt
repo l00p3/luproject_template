@@ -31,7 +31,7 @@ set(CMAKE_BUILD_TYPE Release)
 
 # cmake options and functions
 include(cmake/StandardProjectOptions.cmake)
-include(cmake/FunctionsDefinitions.cmake)
+include(cmake/GlobalTargetProperty.cmake)
 
 # Find dependencies
 include(3rdparty/find_dependencies.cmake)

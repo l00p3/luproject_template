@@ -22,4 +22,5 @@
 add_library(${MYPROJECT_NAME}_core STATIC)
 target_sources(${MYPROJECT_NAME}_core PRIVATE MyFunctions.cpp)
 target_link_libraries(${MYPROJECT_NAME}_core PUBLIC Eigen3::Eigen)
+target_compile_features(${MYPROJECT_NAME}_core PRIVATE cxx_std_17)
 set_global_target_properties(${MYPROJECT_NAME}_core)
