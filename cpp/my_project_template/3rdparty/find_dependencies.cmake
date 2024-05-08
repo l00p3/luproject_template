@@ -26,7 +26,7 @@ if(CMAKE_VERSION VERSION_GREATER 3.24)
   cmake_policy(SET CMP0135 OLD)
 endif()
 
-function(find_external_dependecy PACKAGE_NAME TARGET_NAME INCLUDED_CMAKE_PATH)
+function(find_external_dependency PACKAGE_NAME TARGET_NAME INCLUDED_CMAKE_PATH)
   string(TOUPPER ${PACKAGE_NAME} PACKAGE_NAME_UP)
   set(USE_FROM_SYSTEM_OPTION "USE_SYSTEM_${PACKAGE_NAME_UP}")
   if(${${USE_FROM_SYSTEM_OPTION}})
@@ -39,5 +39,5 @@ function(find_external_dependecy PACKAGE_NAME TARGET_NAME INCLUDED_CMAKE_PATH)
 
 endfunction()
 
-find_external_dependecy("Eigen3" "Eigen3::Eigen" "${CMAKE_CURRENT_LIST_DIR}/eigen/eigen.cmake")
+find_external_dependency("Eigen3" "Eigen3::Eigen" "${CMAKE_CURRENT_LIST_DIR}/eigen/eigen.cmake")
 
