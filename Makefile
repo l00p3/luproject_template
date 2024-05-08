@@ -24,4 +24,4 @@ clean:
 project:
 	@mv cpp/my_project_template/ cpp/$(project-name)
 	@mv python/my_project_template/ python/$(project-name)
-	@mv python/$(project-name)/pybind/my_project_pybind.cpp python/$(project-name)/pybind/$(project-name)_pybind.cpp
+	@mv python/$(project-name)/pybind/my_project_template_pybind.cpp python/$(project-name)/pybind/$(project-name)_pybind.cpp
